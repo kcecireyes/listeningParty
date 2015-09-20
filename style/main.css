@@ -1,0 +1,169 @@
+html{
+	background-color: rgba(245,245,245,0.3);
+}
+.play-button {
+	width:50%;
+	margin: 0 auto;
+}
+.play-button-circle {
+	/*position: fixed;*/
+	width: 100%;
+	height:0;
+	padding-bottom: 100%;
+	border-radius: 50%;
+	overflow:hidden;
+	background: rgba(30,144,255,0.9);
+	box-shadow: 0 0 1px white;
+}
+.play-button-circle:hover {
+	background: rgba(30,144,255,0.8);
+	border: 0.1em solid rgba(248,248,255, 0.4);
+}
+
+.play-button a:hover {
+	color:rgba(248,248,255, 0.7);
+}
+
+.play-button a {
+	display:block;
+	float:left;
+	width:100%;
+	padding-top:50%;
+	padding-bottom:50%;
+	line-height:1em;
+	margin-top:-0.5em;
+	text-align:center;
+	color:rgba(248,248,255, 0.8);
+	font-family:Verdana;
+	font-size:7em;
+	font-weight:bold;
+	text-decoration:none;
+}
+.button{
+	color:rgba(248,248,255, 1);
+	font-family:Verdana;
+	font-weight:bold;
+	text-decoration:none;
+
+	text-align:center;
+	background-color:rgba(244,164,96,0.5);
+	margin: 0 auto;
+	border: 0.2em solid white;
+	padding: 1em 2em;
+	margin: 1em;
+	border-radius: 0.4em;
+	width: 80%;
+}
+.button:hover{
+	background-color:rgba(244,164,96,0.4);
+}
+
+/* IE10 */
+progress {
+	margin-bottom: 1em;
+    color: #1E90FF;
+}
+/* Firefox */
+progress::-moz-progress-bar { 
+	margin-bottom: 1em;
+    background: #1E90FF;
+}
+/* Chrome */
+progress::-webkit-progress-value {
+	margin-bottom: 1em;
+    background: #1E90FF;
+}
+/* Polyfill */
+progress[aria-valuenow]:before  {
+	margin-bottom: 1em;
+    background: #1E90FF;
+}
+
+progress[value] {
+	margin-bottom: 1em;
+	/* Reset the default appearance */
+	-webkit-appearance: none;
+	appearance: none;
+	width: 100%;
+	height: 20px;
+	background-color: #1E90FF;
+}
+
+progress::-webkit-progress-bar {
+	margin-bottom: 1em;
+	background-color: #eee;
+	border-radius: 0.5px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25) inset;
+}
+
+.arrow-down {
+	position: relative;
+	left: 232px;
+	width: 0; 
+	height: 0; 
+	margin-bottom: 5px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 13px solid rgba(244,164,96,1);
+}
+
+
+/*
+==============================================
+pulse -- taken from justinaguilar; thanks bro
+==============================================
+*/
+
+.pulse{
+	animation-name: pulse;
+	-webkit-animation-name: pulse;	
+
+	animation-duration: 1.5s;	
+	-webkit-animation-duration: 1.5s;
+
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.9);
+		opacity: 0.7;		
+	}
+	50% {
+		transform: scale(1);
+		opacity: 1;	
+	}	
+	100% {
+		transform: scale(0.9);
+		opacity: 0.7;	
+	}			
+}
+
+@-webkit-keyframes pulse {
+	0% {
+		-webkit-transform: scale(0.95);
+		opacity: 0.7;		
+	}
+	50% {
+		-webkit-transform: scale(1);
+		opacity: 1;	
+	}	
+	100% {
+		-webkit-transform: scale(0.95);
+		opacity: 0.7;	
+	}			
+}
+@media only screen and (max-width: 700px) {
+	.play-button-circle {
+		margin: 30% 0 65% 0;
+	}
+	.play-button a {
+		font-size: 2em;
+	}
+	.button{
+		margin: 1em;
+		margin: 0.5em 15%;
+		width: 50%;
+	}
+}
